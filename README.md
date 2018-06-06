@@ -1,37 +1,107 @@
-## Welcome to GitHub Pages
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Destiny Amazing Website</title>
+        <style>
+            body {
+                background: rgb(123, 198, 205);
+                color: rgb(45, 45, 45);
+                padding: 10px;
+                font-family: arial;
+            }
+            header {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            #all-contents {
+                max-width: 800px;
+                margin: auto;
+            }
+    
+            /* navigation menu */
+            nav {
+                background: rgb(125, 000, 41);
+                margin: 0 auto;
+                display: flex;
+                padding: 10px;
+            }
+            nav header {
+                display: flex;background: rgb(111, 111, 222);
+        margin: 0 auto;
+        display: flex;
+        padding: 10px;
+                align-items: center;
+                color: rgb(111, 222, 333);
+                flex: 1;
+            }
+            nav ul {
+                list-style-image: none;
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            nav a {
+                text-decoration: none;
+                color: #111;
+            }
+    
+            /* main container area beneath menu */
+            main {
+                background: rgb(245, 238, 219);
+                display: flex;
+            }
+            .sidebar {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            .sidebar img {
+                width: 200px;
+                border:10px solid black;
+                border-radius:30px;
+            }
+            .content {
+                flex: 1;
+                padding: 15px;
+            }
+            .interests header {
+                font-size: 1.25em;
+            }
+        </style>
+    </head>
+    
+    <body>
+         <div id="all-contents"> 
+            <nav>
+                 <header>Destiny's Website</header>
+                 <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </nav>
+            
+            <main>
+                <div class="sidebar">
+                 <img src="https://pmcvariety.files.wordpress.com/2017/09/beyonce.png" width="200" height="200">
+                </div>+
+                
+    
+                <div class="content">
+                 <header>DestinyRiley</header>
+         <p>Student at Helen Cox High School</p>
+               <section class="interests">
+                        <header>Interests</header>
+                        <ul>
+                            <li>Majorette</li>
+                            <li>Sleeping</li>
+                            <li>Eating</li>
+                        </ul>
+                    </section>
+                </div>
+           
 
-You can use the [editor on GitHub](https://github.com/DestinyRiley/DestinyRiley.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DestinyRiley/DestinyRiley.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+            </main>
+        </div>
+ 
+    </body>
+</html>
