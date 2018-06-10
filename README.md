@@ -1,9 +1,16 @@
 # DestinyRiley.github.io
+<<<<<<< HEAD
 My Awesome Website!
 <html>
     <head>
         
         <title>Destiny Amazing Website</title>
+=======
+<html>
+    <head>
+        <title>Destiny Amazing Website</title>
+        <link rel="stylesheet" type="text/css" href="myStyle.css"></link>
+>>>>>>> 7c7c0fe33778bee8a4bd3b73c58510f6e4138f73
     </head>
     
     <body>
@@ -40,4 +47,8 @@ My Awesome Website!
         </div>
  
     </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 7c7c0fe33778bee8a4bd3b73c58510f6e4138f73
