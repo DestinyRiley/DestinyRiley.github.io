@@ -39,7 +39,7 @@
         collectable.create(type.steve, 300, 180, 7, 0.8);
         collectable.create(type.steve, 90, 100, 5, 0.4);
         collectable.create(type.max, 400, 300, 9, 0.4);
-        
+       
         
         
         
