@@ -18,7 +18,7 @@
         function increaseScore(amount) {
             score += amount;
             hud.updateScore(amount);
-            console.log("setting score = ",score);
+            console.log("100",score);
         }
 
         function getScore() {

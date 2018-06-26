@@ -11,7 +11,7 @@ var init = function (window) {
         app = opspark.makeApp(world.makeRules()),
         canvas = app.canvas, 
         view = app.view,
-        fps = draw.fps('#000');
+        fps = draw.fps('#222');
     
     var 
         space, 
@@ -36,7 +36,7 @@ var init = function (window) {
     view.addChild(background);
 
     
-    var help = draw.textfield('MOVES || w: jump | e: flying jump | s: duck | space: fire | q your mom!', 
+    var help = draw.textfield('MOVES || w: jump | e: flying jump | s: duck | space: fire | q boom', 
         '20px Arial',
         '#ccc', 'left');
     help.x = 10;
@@ -46,7 +46,7 @@ var init = function (window) {
     window.opspark.makeSpriteSheet(data)
         .then(function (ss) {
             spritesheet = ss;
-            halle = window.opspark.makeHalle(spritesheet, particleManager,true);
+            halle = window.opspark.makeHalle(spritesheet, particleManager,false);
             halle.x = halle.getBounds().width * 2;
             halle.y = ground.y - halle.getBounds().height + 3;
             app.addUpdateable(halle);

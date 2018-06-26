@@ -18,14 +18,14 @@ var level01 = function (window) {
             gameItems: [
                 {type: 'sawblade',x:400,y:groundY},
                 {type: 'sawblade',x:600,y:groundY},
-                {type: 'sawblade',x:900,y:groundY}
+                {type: 'sawblade',x:900,y:groundY},
             ]
         };
         window.levelData = levelData;
         // set this to true or false depending on if you want to see hitzones
         game.setDebugMode(true);
 
-        // BEGIN EDITING YOUR CODE HERE
+// BEGIN EDITING YOUR CODE HERE
     var hitZoneSize = 25;
     var damageFromObstacle = 10;
     var myObstacle = game.createObstacle(hitZoneSize,damageFromObstacle);
@@ -37,33 +37,33 @@ var level01 = function (window) {
     obstacleImage.x = -25;
     obstacleImage.y = -25;
     
-    var enemy =  game.createGameItem('enemy',25);
-   
-   function createEnemy(x,y) {
-    // all code from TODO 12
-     var redSquare = draw.rect(50,50,'red');
-    redSquare.x = -25;
-    redSquare.y = -25;
-    enemy.addChild(redSquare);
-    enemy.x = x;
-    enemy.y = y;
-    game.addGameItem(enemy);
-    enemy.velocityX = -1;
-    enemy.rotationalVelocity = 10;
-    enemy.onPlayerCollision = function() {
-        game.changeIntegrity(-100);
-    enemy.fadeOut();
-};
-enemy.onProjectileCollision = function() {
-    game.increaseScore(100)
-enemy.fadeOut();
-    
-}
-}
-createEnemy(400,groundY-10);
-createEnemy(800,groundY-100);
-createEnemy(1200,groundY-50);   
-    
+   function createEnemy(x,y){
+       var enemy =  game.createGameItem('enemy',25);
+       var redSquare = draw.rect(50,50,'yellow');
+       redSquare.x = -25;
+       redSquare.y = -25;
+       enemy.addChild(redSquare);
+       enemy.x = x;
+       enemy.y = y;
+       game.addGameItem(enemy);
+       enemy.velocityX = -2;
+       enemy.rotationalVelocity =20;
+     
+       enemy.onPlayerCollision = function() {
+           
+       game.changeIntegrity(-100);
+       enemy.fadeOut();
+           
+           };
+               enemy.onProjectileCollision = function() {
+                 game.changeIntegrity(100);  
+                 enemy.fadeOut();
+                   
+       };
+   }
+     createEnemy(400,groundY-10);
+     createEnemy(800,groundY-100);
+     createEnemy(1200,groundY-50);
 function createSawBlade(x,y){
     //your code goes here
     obstacleImage = draw.bitmap('img/sawblade.png');
@@ -71,13 +71,36 @@ function createSawBlade(x,y){
     obstacleImage.x = x;
     obstacleImage.y = y;
 }
-        createSawBlade(83,55);
-        createSawBlade(168,50);
-        createSawBlade(0,300);
-        createSawBlade(0,170);
+        createSawBlade(600,100);
+        createSawBlade(900,650);
+        createSawBlade(100,600);
+        createSawBlade(400,170);
+        
+        
+    var reward = game.createGameItem("reward", 25);
+function createReward(x,y){
+    var goldenCircle = draw.circle(25,"#ddb62a");
+    goldenCircle.x = 0;
+    goldenCircle.y= 0;
+    reward.addChild(goldenCircle);
+    reward.x = x;
+    reward.y = y;
+     reward.velocityX = -1;
+    game.addGameItem(reward);
+    reward.onPlayerCollision = function (){
+        game.increaseScore(100);
+        reward.fadeOut();
+};
+reward.onProjectileCollision = function(){
+    game.increaseScore(1000);
+reward.fadeOut();
+};
+}    
+        createReward(500,400);     
+        createReward(500,300);
     };
     
-   
+    
 };
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
@@ -85,4 +108,4 @@ if((typeof process !== 'undefined') &&
     (typeof process.versions.node !== 'undefined')) {
     // here, export any references you need for tests //
     module.exports = level01;
-}
+    }
